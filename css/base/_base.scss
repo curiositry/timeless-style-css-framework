@@ -1,0 +1,16 @@
+// Lobotomized Owl
+// See: http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+* + * {
+  margin-top: 1rem;
+}
+
+body {
+  background-color: $bg-color;
+}
+ 
+// Basic container for good aesthetics and optimal line-length
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 960px;
+}
