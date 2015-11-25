@@ -43,9 +43,14 @@ img {
   max-width: 100%;
 }
 
-// Keep things regular (so nested <li>s have same margin as lob-owl applies)
+// Make nested <li>s have same margin-top as lob-owl applies
 li {
   margin-top: 1rem;
+}
+
+// Indent nested <li>s
+li + li {
+  margin-left: 1.25rem;
 }
 
 // Basic wrapping, smaller font-size, bg, etc. for code.
