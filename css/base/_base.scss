@@ -57,6 +57,14 @@ li + li {
   margin-left: 1.25rem;
 }
 
+dt {
+  font-weight: bold;
+}
+
+dd {
+  text-indent: 1.5rem;
+}
+
 // Basic wrapping, smaller font-size, bg, etc. for code.
 pre, code{
   background-color: $tertiary-color;
@@ -130,6 +138,19 @@ hr:after {
 // … or not!
 hr.plain-hr:after {
   display: none;
+}
+
+// So tables don’t look like a lumber yard…
+tr:nth-child(odd){
+  background-color: $tertiary-color;
+}
+
+thead {
+  border-bottom: 1px solid $bg-color;
+}
+
+td, th {
+  padding: 0.25rem 0.5rem;
 }
 
 // Give inline items breating room;
