@@ -14,3 +14,31 @@ body {
   padding: 1rem;
   max-width: 960px;
 }
+
+// No funky business…
+img {
+  max-width: 100%;
+}
+
+// Basic wrapping, smaller font-size, bg, etc. for code.
+pre, code{
+  background-color: $tertiary-color;
+  white-space: pre-wrap;
+  font-size: 0.8rem;
+  font-family: $mono-font-stack;
+  border: none;
+}
+ 
+pre {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid tint($active-color, 20);
+}
+
+code {
+  padding: 0.25rem 0.25rem;
+}
+
+// Bye bye hideous yellow…
+mark {
+  background-color: $tertiary-color;
+}
