@@ -7,10 +7,11 @@
 * https://github.com/curiositry/sassisfy
 */
 
+@import 'utils/functions';
 @import 'utils/mixins';
 
 @import 'vendor/sanitize';
 
 @import 'base/variables';
 @import 'base/base';
-
+@import 'base/typography';
