@@ -22,3 +22,21 @@ figcaption {
   margin-top: 0;
   box-shadow: inset 0 10px 10px -10px #999;
 }
+
+.thumb,
+figure.thumb{
+  width: 100%;
+  margin: 1rem auto;
+  line-height: 1;
+  
+  @include breakpoint(sm){
+    float:right;
+    max-width: 225px;
+    margin: 0.5rem 0 0.5rem 1rem;
+  }
+}
+
+.thumb img.full-img{
+  margin: 0 auto;
+  width: 100%;
+}
