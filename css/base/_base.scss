@@ -70,3 +70,11 @@ hr:after {
 hr.plain-hr:after {
   display: none;
 }
+
+// Give inline items breating room;
+.meta-spacer:after {
+  color: $tertiary-color;
+  content: ' • ';
+  font-weight: 900;  
+  font-family: $interface-font-stack;
+}
