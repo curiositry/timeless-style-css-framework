@@ -1,0 +1,53 @@
+// This is our basic button
+button, 
+.btn, 
+input[type=submit] {
+  @include gradient($tertiary-color, 
+                    mix($tertiary-color, $primary-color, 90)
+                   );
+                   
+  padding: 0.5rem 0.8rem;
+  color: $primary-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor:pointer;
+  border: 1px solid $interactive-color;
+  border-radius: 0.25rem;
+  
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+
+  
+  
+  &:hover {
+    @include gradient(adjust-hue($interactive-color, 10%), 
+                      adjust-hue($active-color, 10%)
+                     );
+                     
+    box-shadow: 0 0 0.5rem 0rem $primary-color inset;
+    color: $bg-color !important;
+    border: 1px solid $active-color;
+    box-shadow: 0 0 0.5rem -0.15rem $primary-color inset;
+    
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+// And this is our red hot chili peppers button
+.btn--cta {
+  @include gradient($interactive-color, 
+                    mix($interactive-color, black, 75)
+                   );
+  color: $bg-color;
+  border: 1px solid $tertiary-color;
+  
+  &:hover {
+    @include gradient(adjust-hue($interactive-color, 10%), 
+                      adjust-hue($active-color, 10%)
+                     );
+    box-shadow: 0 0 0.5rem -0.15rem $primary-color inset;
+  }
+}
