@@ -33,6 +33,7 @@ a {
   }
 }
 
+// So nobody gets their hopes up
 [disabled] {
   color: $butler-color;
 }
@@ -40,6 +41,11 @@ a {
 // No funky business…
 img {
   max-width: 100%;
+}
+
+// Keep things regular (so nested <li>s have same margin as lob-owl applies)
+li {
+  margin-top: 1rem;
 }
 
 // Basic wrapping, smaller font-size, bg, etc. for code.
@@ -56,13 +62,36 @@ pre {
   border: 1px solid tint($active-color, 20);
 }
 
+// Give it some space
 code {
-  padding: 0.25rem 0.25rem;
+  padding: 0.25rem 0.5rem;
 }
 
 // Bye bye hideous yellow…
 mark {
   background-color: $tertiary-color;
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 0 0.25rem 0 $tertiary-color;
+}
+
+kbd {
+  background-color: $tertiary-color;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid $butler-color;
+}
+
+abbr,
+acronym {
+  letter-spacing: 0.05rem;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  -moz-font-feature-settings: "smcp=1";
+  -moz-font-feature-settings: "smcp";
+  -ms-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  -o-font-feature-settings: "smcp";
+  font-feature-settings: "smcp";
 }
 
 // Nice, subtle, clean <hr>s
@@ -79,11 +108,12 @@ hr{
 // With special sauce…
 hr:after {
   position: relative;
-  bottom: 0.28rem;
+  bottom: 0.5rem;
+  color: $butler-color;
   display: inline;
   padding: 0 1rem;  
   content: "* * *";
-  font-size: 1.954rem;
+  font-size: 1.563rem;
   line-height: 0;
   background-color: $bg-color;
 }
@@ -97,6 +127,5 @@ hr.plain-hr:after {
 .meta-spacer:after {
   color: $tertiary-color;
   content: ' • ';
-  font-weight: 900;  
   font-family: $interface-font-stack;
 }
