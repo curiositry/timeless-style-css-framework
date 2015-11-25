@@ -1,0 +1,118 @@
+/**
+* ◊FUNCTIONS
+* ----------
+* NOTE: the "type-typescale()", "type-headings()", and "type-headings-style()" * are mixins from Typeplate that I have only slightly modified, and are
+* probably close enough to be convered by typeplate’s licence.
+* Typeplate is a neat MIT licenced starter kit, but more complex than I needed.
+* Find it here: http://github.com/typeplate/starter-kit
+*/
+
+@mixin type-typescale($scale, $base, $value, $measure:"") {
+  @if $value == rem {
+    font-size: $scale * 1px;
+    font-size: ($scale/$base) + $value;
+  } @else if $value == em {
+    font-size: ($scale/$base) + $value;
+  } @else {
+    font-size: $scale * 1px;
+  }
+
+  @if $measure != "" {
+    @if $value == rem {
+      margin-bottom: type-measure-margin($scale, $measure, $value: px);
+      margin-bottom: type-measure-margin($scale, $measure, $value);
+    } @else if $value == em {
+      margin-bottom: type-measure-margin($scale, $measure, $value: em);
+    } @else {
+      margin-bottom: type-measure-margin($scale, $measure, $value);
+    }
+  }
+}
+
+@mixin type-headings() {
+  @each $name, $size in $type-scale {
+    .#{$name} {
+      @extend %typgr8-hN;
+      @include type-typescale(
+        $size,
+        $font-base,
+        rem,
+        $measure
+      );
+    }
+  }
+}
+
+@mixin type-headings-style() {
+  @each $h, $size in $type-headings {
+    #{$h} {
+      @extend .#{$size};
+    }
+  }
+}
+
+
+
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix($color, white, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix($color, black, $percentage);
+}
+
+
+
+
+/// Simple two-point, cross-browser gradient mixin
+@mixin gradient($from, $to) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+ 
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($from, $to);
+ 
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+ 
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($from, $to);
+ 
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($from, $to);
+}
+
+
+
+
+/// Solid little media query mixin with four options
+@mixin respond-to($point) {
+  @if $point == lg {
+    @media all and (min-width: 960px) { // Desktop+
+      @content;
+    }
+  } @else if $point == md {
+    @media all and (min-width: 800px) { // Tablet+
+      @content;     
+    }
+  } @else if $point == sm {
+    @media all and (min-width: 640px) { // Phone+
+      @content;             
+    }
+  } @else if $point == mbl {
+    @media all and (max-width: 640px) { // Phone-
+      @content;             
+    }
+  }
+}
