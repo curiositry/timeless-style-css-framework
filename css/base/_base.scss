@@ -38,6 +38,10 @@ a {
   color: $butler-color;
 }
 
+[readonly] {
+  background-color: mix($butler-color, white, 50);
+}
+
 // No funky business…
 img {
   max-width: 100%;
