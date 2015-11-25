@@ -7,6 +7,7 @@
 * https://github.com/curiositry/sassisfy
 */
 
+
 @import 'utils/functions';
 @import 'utils/mixins';
 
@@ -15,3 +16,10 @@
 @import 'base/variables';
 @import 'base/base';
 @import 'base/typography';
+@import 'base/print';
+
+@import 'components/inputs';
+@import 'components/buttons';
+
+
+
