@@ -7,6 +7,10 @@
 body {
   background-color: $bg-color;
 }
+
+::-moz-selection, ::selection {
+  background: $secondary-color;
+}
  
 // Basic container for good aesthetics and optimal line-length
 .container {
