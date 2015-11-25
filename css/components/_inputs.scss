@@ -1,0 +1,23 @@
+/**
+* INPUTS
+* ---------
+* Base styling for non-atrocious inputs and textareas
+*/
+
+input, 
+button,
+textarea {
+  width: auto;
+  padding: 0.25rem 0.5rem;
+  font-weight: $base-font-weight;
+  border: 1px solid $butler-color;
+  box-shadow: none;
+  font-family: $interface-font-stack;
+}
+
+input:focus, input:active, 
+textarea:focus, textarea:active, 
+button:focus, button:active {
+  outline: none;
+  border: 1px solid $interactive-color;
+}
