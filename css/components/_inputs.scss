@@ -15,6 +15,12 @@ textarea {
   font-family: $interface-font-stack;
 }
 
+input[type=color] {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+}
+
 input:focus, input:active, 
 textarea:focus, textarea:active, 
 button:focus, button:active {
