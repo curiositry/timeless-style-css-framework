@@ -4,7 +4,6 @@
 * Here we find variables for the theme colours, font stacks, and more
 */
 
-
 /* ◊COLOURS */
 
 // For links and so on
@@ -15,6 +14,10 @@ $active-color: #ff5335;
 $primary-color: #353940;
 $secondary-color: #3e92a3;
 $tertiary-color:  #dfe0d4;
+
+$c1: $primary-color;
+$c2: $secondary-color;
+$c3: $tertiary-color;
 
 // Butler colour is for small interface elements. 
 // Classy and understated, with a napkin over the arm and a british accent…
@@ -28,6 +31,12 @@ $text-font-stack: 'Charter', 'Georgia', serif;
 $interface-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", sans-serif;
 $header-font-stack: $interface-font-stack;
 $mono-font-stack: 'Source Code Pro', 'Consolas', 'Ubuntu Mono', monospace;
+
+// Short vars for font-stack
+$tfs: $text-font-stack;
+$ifs: $interface-font-stack;
+$hfs: $header-font-stack;
+$mfs: $mono-font-stack;
 
 // This sets the line-length…
 $container-width: 960px;
