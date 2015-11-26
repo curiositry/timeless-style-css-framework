@@ -1,0 +1,115 @@
+/**
+* ◊HELPERS
+* -------
+* Helpful classes for quick layout tweaks and hacks
+*/
+
+// Yep, about what it sounds like
+.inline{
+  display: inline;
+}
+
+// Center all the things
+.center-text{
+  text-align: center;  
+}
+
+// Use small caps (if available)
+.sc {
+  -moz-font-feature-settings: "smcp=1";
+  -moz-font-feature-settings: "smcp";
+  -ms-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  -o-font-feature-settings: "smcp";
+  font-feature-settings: "smcp";
+}
+
+// The ol’ clearfix hack
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+// Margin + padding adjustments…
+.m0a {
+  margin: 0 auto;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.p1rem {
+  padding: 1rem;
+}
+
+.m1rem {
+  margin: 1rem;
+}
+
+
+// Full width
+.full, .full-width {
+  width: 100%;
+}
+
+// For when a link needs to go incognito
+.unstyled-anchor, .unstyled-anchor:hover, .unstyled-anchor:active{
+  text-decoration: inherit;
+  border:inherit;
+  color:inherit;
+}
+
+// Horizontal center things
+.hcenter {
+  margin: 0 auto;
+  width: 100%;
+}
+
+// Poof!
+.hidden {
+  display: none;
+}
+
+// Font things
+.sans-serif {
+  font-family: $interface-font-stack;
+}
+
+.serif {
+  font-family: $text-font-stack;
+}
+
+
+// Colours
+.tertiary-bg {
+  background: $tertiary-color;
+}
+
+.tertiary-color {
+  color: $tertiary-color;
+}
+
+// Pretty pretty ampersands
+.amp {
+  font-style:italic;
+  font-weight:400;
+  font-family: 'Libre Baskerville', Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+}
