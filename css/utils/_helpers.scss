@@ -40,29 +40,37 @@
 }
 
 // Margin + padding adjustments…
-.m0a {
-  margin: 0 auto;
-}
 
-.m0 {
-  margin: 0;
-}
+// Classy overrides for margin
+.m0    { margin: 0; }
 
-.p0 {
-  padding: 0;
-}
+.m0a   { margin: 0 auto; }
+.m1rem { margin: 1rem; }
 
-.mt0 {
-  margin-top: 0 !important;
-}
+.mt0 { margin-top:    0 !important; }
+.mr0 { margin-right:  0 !important; }
+.mb0 { margin-bottom: 0 !important; }
+.ml0 { margin-left:   0 !important; }
 
-.p1rem {
-  padding: 1rem;
-}
+.mt1 { margin-top:    1 !important; }
+.mr1 { margin-right:  1 !important; }
+.mb1 { margin-bottom: 1 !important; }
+.ml1 { margin-left:   1 !important; }
 
-.m1rem {
-  margin: 1rem;
-}
+// Classy overrides for padding
+.p0  { padding: 0; }
+
+.pt0 { padding-top:    0 !important; }
+.pr0 { padding-right:  0 !important; }
+.pb0 { padding-bottom: 0 !important; }
+.pl0 { padding-left:   0 !important; }
+
+.pt1 { padding-top:    1 !important; }
+.pr1 { padding-right:  1 !important; }
+.pb1 { padding-bottom: 1 !important; }
+.pl1 { padding-left:   1 !important; }
+
+.p1rem { padding: 1rem; }
 
 
 // Full width
@@ -84,6 +92,7 @@
 }
 
 // Poof!
+// Usually you should use the [hidden] attribute, but this could come in handy…
 .hidden {
   display: none;
 }
