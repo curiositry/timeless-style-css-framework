@@ -8,11 +8,11 @@
 
 // For links and so on
 $interactive-color: mix(#ff5335, black, 90);
-$active-color: #ff5335;
+$active-color: #ff5335;  
 
 // The three main colours
-$primary-color: #353940;
-$secondary-color: #3e92a3;
+$primary-color: #444;
+$secondary-color: #555;
 $tertiary-color:  #dfe0d4;
 
 $c1: $primary-color;
@@ -39,7 +39,7 @@ $hfs: $header-font-stack;
 $mfs: $mono-font-stack;
 
 // This sets the line-length…
-$container-width: 960px;
+$container-width: 800px;
 
 /* ◊TYPOGRAPHY VARIABLES */
 $line-height: 1.5 !default;
