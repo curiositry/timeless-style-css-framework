@@ -1,13 +1,13 @@
-aside{
+aside {
   font-family: $interface-font-stack;
   font-size: 1rem;
   background-color: #fff;
   padding: 1rem;
   border: 1px solid $butler-color;
   
-  @include respond-to(md){
+  @include respond-to(md) {
     width: 40%;
-    float:right;
+    float: right;
     margin-right: 0;
     margin:1rem;
     position: relative;
