@@ -8,15 +8,20 @@
 .share {
 }
 
-.share .fa-twitter:hover {
+.share .fa-twitter {
   color: #4099FF;
 }
 
-.share .fa-facebook:hover {
+.share .fa-facebook {
   color: #3a5795;
 }
 
-.share .fa-google-plus:hover {
+.share .fa-google-plus {
   color: #dd4b39;
+}
+
+.share .fa:hover {
+  color: $active-color;
+  cursor: pointer;
 }
 
