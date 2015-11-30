@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="DESCRIPTION"/>
+  <meta name="author" content="AUTHOR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+
+  <title>Sassisfy: A satisfying Sass starting point for stable + sane stylesheets.</title>
+  <link rel="stylesheet" href="css/main.css" media="screen" />
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+</head>
+<body >
+<main class="container">
+  
+  <header class="site-header">
+    <h1 class="mb0">Sassisfy</h1>
+    <em class="mt0">A solid + satisfying sass starting point for stable and sane stylesheet architecture.</em>
+  </header>
+
+  <h2>Artful Article Title</h2>
+  <p style="font-size:1.34rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odio quas quia magni excepturi odit iure, doloribus, sapiente perspiciatis, minus autem. Ratione, quia ad eos.</p>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque deleniti magni debitis illum minima dolor, nostrum rem inventore omnis consequuntur quisquam neque nam modi sequi nemo odio. Repellat cum, debitis est magnam quibusdam at laudantium porro, totam sapiente. Aliquam tempora incidunt dolorum recusandae eius fugiat animi possimus quidem quam repellat.</p>
+  
+  <aside>
+    Here’s an aside. It’s like an english butler, diffident and unobtrusive.
+  </aside>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quos distinctio nam quo totam molestias sed ratione quidem voluptas saepe porro odit assumenda ex eveniet, maiores accusantium! Nulla inventore ipsa saepe dolorem omnis temporibus voluptatem magni quibusdam quisquam, eligendi dignissimos, error eveniet architecto debitis ex, beatae soluta aperiam distinctio quas quasi similique recusandae iusto? Sit necessitatibus, temporibus facere nisi nemo, repellendus, id perferendis veniam odit aliquam aliquid sint qui beatae culpa rem error neque. Aperiam ad dignissimos quaerat, soluta ducimus sit modi impedit provident doloremque id quisquam fuga optio deleniti dolores suscipit ipsa hic! Adipisci officiis provident minus unde perspiciatis.</p>
+  
+  <br>
+  <footer class="site-footer">
+    <span class="mt1">
+      &copy; 2015  <a href="http://curiositry.com">Curiositry</a>
+    </span>
+    <span class="meta-spacer"></span>
+    
+    <span class="share fr mt0 mb1 inline">
+      <a href="http://twitter.com/curiositry"><i class="fa fa-twitter mt0 "></i></a>
+      <span class="meta-spacer mt0 "></span>
+      
+      <i class="fa fa-facebook mt0 "></i>
+      <span class="meta-spacer mt0 "></span>
+      
+      <i class="fa fa-google-plus mt0 "></i>
+    </span>
+  </footer>
+  
+</main>
+  <script>
+    var cb = function() {
+      var l = document.createElement('link'); l.rel = 'stylesheet';
+      l.href = 'css/defer.css';
+      var h = document.getElementsByTagName('head')[0];
+      h.parentNode.insertBefore(l, h);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
+  </script>
+  
+  <script async src="js/index.js"></script>
+
+</body>
+</html>
