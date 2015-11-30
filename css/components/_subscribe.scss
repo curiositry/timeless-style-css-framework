@@ -13,6 +13,7 @@
 
 .subscribe input[type='email'] {
   flex:3;
+  background-color: $tertiary-color;
   &:focus{
     border-left: 3px solid $active-color;
   }
@@ -39,6 +40,7 @@
   color: $secondary-color;
   background-color: $butler-color;
   padding: 2rem;
+  border: 4px solid $tertiary-color;
 }
 
 .subscribe--box h2 {
@@ -48,7 +50,6 @@
 .subscribe--box input[type='email'] {
   color: $secondary-color;
   border:0;
-  background-color: $tertiary-color;
 }
 
 .subscribe--box button[type='submit'] {  
@@ -81,7 +82,6 @@
 }
 
 .subscribe input[type='email'] {
-  background-color: $tertiary-color;
   font-family: $interface-font-stack;
   border: 0;
 }
