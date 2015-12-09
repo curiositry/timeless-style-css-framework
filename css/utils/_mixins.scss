@@ -32,7 +32,6 @@
 @mixin type-headings() {
   @each $name, $size in $type-scale {
     .#{$name} {
-      @extend %typgr8-hN;
       @include type-typescale(
         $size,
         $font-base,
