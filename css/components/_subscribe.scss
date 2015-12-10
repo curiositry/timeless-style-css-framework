@@ -22,14 +22,13 @@
     border-left: 3px solid $active-color;
   }
   @include respond-to(sm){
-    flex:3;
+    width: calc(100% - 20rem);
+    flex: 3;
   }
 }
 
 .subscribe button[type='submit'] {  
   width: 100%;
-  max-width:10rem;
-  min-width:9rem;
   @include respond-to(sm){
     flex:1;
   }
@@ -38,7 +37,6 @@
 
 .subscribe--box .fa-envelope {
   display: none; // not on mobile; I know this is a hack.
-  font-size: 2rem;
   color: white;
   float: left;
   padding-right: 1.5rem;
