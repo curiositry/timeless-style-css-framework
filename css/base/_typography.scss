@@ -7,13 +7,18 @@
 * It uses a major third typescale. */
 
 
-
 // Start with the basics
 body {
   font-family: $interface-font-stack;
   line-height: $line-height;
   font-weight: $base-font-weight;
-  font-size: 18px;
+  font-size: 16px;
+  @include respond-to(sm){
+    font-size: 18px;
+  }
+  @include respond-to(md){
+    font-size: 21px;
+  }
 }
 
 // Get some nice typeographic scale going
