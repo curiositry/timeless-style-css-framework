@@ -7,12 +7,15 @@
 input, 
 button,
 textarea {
-  width: auto;
+  width: 100%;
   padding: 0.25rem 0.5rem;
   font-weight: $base-font-weight;
   border: 1px solid $butler-color;
   box-shadow: none;
   font-family: $interface-font-stack;
+  @include respond-to(sm){
+    width: auto;
+  }
 }
 
 input[type=color] {
