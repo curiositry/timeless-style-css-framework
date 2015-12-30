@@ -12,8 +12,7 @@
 @import 'utils/mixins';
 
 @import 'vendor/sanitize';
-@import 'vendor/normalize-opentype';
-
+@import 'vendor/utility-opentype';
 
 @import 'base/variables';
 @import 'base/base';
@@ -29,7 +28,6 @@
 @import 'components/asides';
 @import 'components/share';
 @import 'components/subscribe';
-
 
 @import 'utils/helpers';
 
