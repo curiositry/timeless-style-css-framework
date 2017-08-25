@@ -1,14 +1,12 @@
-/**
-* VARIABLES
-* ---------
-* Here we find variables for the theme colours, font stacks, and more
-*/
+// VARIABLES
+// ---------
+// Here we find variables for the theme colours, font stacks, and more
 
-/* ◊COLOURS */
+// COLOURS
 
 // For links and so on
 $interactive-color: mix(#ff5335, black, 90);
-$active-color: #ff5335;  
+$active-color: #ff5335;
 
 // The three main colours
 $primary-color: #152a38;
@@ -19,13 +17,14 @@ $c1: $primary-color;
 $c2: $secondary-color;
 $c3: $tertiary-color;
 
-// Butler colour is for small interface elements. 
-// Classy and understated, with a napkin over the arm and a british accent…
+// Butler colour is for small interface elements.
+// Classy and understated, with a napkin over the arm and a british accent...
 $butler-color: #ccc;
 
+// Off-white background color
 $bg-color: #fdfdfd;
 
-// Some nice default font stacks for serif body text, 
+// Some nice default font stacks for serif body text,
 // interface elements like menues and so on, headers, and code.
 $text-font-stack: 'Source Serif Pro', 'Charter', 'Georgia', serif;
 $interface-font-stack: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", sans-serif;
@@ -38,10 +37,11 @@ $ifs: $interface-font-stack;
 $hfs: $header-font-stack;
 $mfs: $mono-font-stack;
 
-// This sets the line-length…
+// This sets the line-length...
 $container-width: 800px;
 
-/* ◊TYPOGRAPHY VARIABLES */
+// TYPOGRAPHY VARIABLES
+
 $line-height: 1.5 !default;
 $font-size: 112.5 !default;
 $font-base: 16 * ($font-size/100) !default;
@@ -55,21 +55,21 @@ $font-adjust-lg: 1;
 $x-height-offset: 0.25rem;
 
 
-/**
-* ◊TYPESCALE
-* ----------
-* Greek heading names and scale using base font-size
-* Created using https://gist.github.com/curiositry/6640ac2b6e99102d8a61
-*
-* Scale is Major Third: 18 * 1.25
-*
-* Pixel Values: 7.373, 9.216, 11.52, 14.4, 18, 22.5, 28.125, 35.156, 43.945,                  *               54.931, 68.664, 85.83, 107.288, 134.11, 167.638
 
-* REM values: 0.41, 0.512, 0.64, 0.8, 1, 1.25, 1.563, 1.954, 
-*             2.443, 3.054, 3.818, 4.773, 5.966, 7.458, 9.323
-*/
+// TYPESCALE
+// ---------
+// Greek heading names and scale using base font-size
+// Created using https://gist.github.com/curiositry/6640ac2b6e99102d8a61
+//
+// Scale is Major Third: 18 * 1.25
+//
+// Pixel Values: 7.373, 9.216, 11.52, 14.4, 18, 22.5, 28.125, 35.156,
+// 43.945, 54.931, 68.664, 85.83, 107.288, 134.11, 167.638
+//
+// REM values: 0.41, 0.512, 0.64, 0.8, 1, 1.25, 1.563, 1.954,
+//          2.443, 3.054, 3.818, 4.773, 5.966, 7.458, 9.323
 
- 
+
 // $type-scale: (
 //   sassisfy-tera: 4.773,
 //   sassisfy-giga: 3.818,
@@ -94,12 +94,11 @@ $type-scale: (
   sassisfy-zeta: 14.4,
 ) !default;
 
-// don’t want it *too* tiny
 $type-headings: (
   h1: sassisfy-alpha,
   h2: sassisfy-beta,
   h3: sassisfy-gamma,
   h4: sassisfy-delta,
   h5: sassisfy-delta,
-  h6: sassisfy-delta 
+  h6: sassisfy-delta
 ) !default;
