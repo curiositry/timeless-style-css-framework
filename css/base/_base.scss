@@ -13,24 +13,24 @@ body {
   background: $secondary-color;
   color: white;
 }
- 
+
 // Basic container for good aesthetics and optimal line-length
 .container {
   margin: 0 auto;
-  padding: 2rem;
   max-width: $container-width;
+  padding: 2rem;
 }
 
 a {
-  color: $interactive-color;
   border-bottom: 1px solid $tertiary-color;
-  -webkit-transition: color, .2s;
+  color: $interactive-color;
   -o-transition: color, .2s;
+  -webkit-transition: color, .2s;
   transition: color, .2s;
-  
+
   &:hover {
-    color: $active-color;
     border-bottom: 2px solid $tertiary-color;
+    color: $active-color;
   }
 }
 
@@ -74,7 +74,7 @@ pre, code{
   font-family: $mono-font-stack;
   border: none;
 }
- 
+
 pre {
   padding: 0.5rem 0.8rem;
   border: 1px solid tint($active-color, 20);
@@ -129,7 +129,7 @@ hr:after {
   bottom: 0.5rem;
   color: $butler-color;
   display: inline;
-  padding: 0 1rem;  
+  padding: 0 1rem;
   content: "* * *";
   font-size: 1.563rem;
   line-height: 0;
