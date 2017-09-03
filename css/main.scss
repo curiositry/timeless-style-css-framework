@@ -1,12 +1,11 @@
 @charset 'utf-8';
-/**
-* SASSISFY
-* --------
-* A solid + satisfying sass starting point for stable and sane stylesheet
-* architecture.
-* By @curiositry
-* https://github.com/curiositry/sassisfy
-*/
+
+// SASSISFY
+// --------
+// A solid + satisfying sass starting point for stable and sane stylesheet
+// architecture.
+// By @curiositry
+// https://github.com/curiositry/sassisfy
 
 @import 'utils/functions';
 @import 'utils/mixins';
@@ -30,9 +29,3 @@
 @import 'components/subscribe';
 
 @import 'utils/helpers';
-
-
-
-
-
-
