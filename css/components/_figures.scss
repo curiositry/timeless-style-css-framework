@@ -1,8 +1,6 @@
-/**
-* FIGURES
-* -------
-* Default styles for figures and their captions
-*/
+// FIGURES
+// -------
+// Default styles for figures and their captions
 
 main img {
   margin: 1.5rem 0;
@@ -21,19 +19,19 @@ figcaption {
 }
 
 .thumb,
-figure.thumb{
+figure.thumb {
   width: 100%;
   margin: 1rem auto;
   line-height: 1;
 
-  @include respond-to(sm){
-    float:right;
+  @include respond-to(sm) {
+    float: right;
     max-width: 225px;
     margin: 0.5rem 0 0.5rem 1rem;
   }
 }
 
-.thumb img.full-img{
+.thumb img.full-img {
   margin: 0 auto;
   width: 100%;
 }
