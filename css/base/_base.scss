@@ -9,7 +9,8 @@ body {
   margin-top: 0;
 }
 
-::-moz-selection, ::selection {
+::-moz-selection,
+::selection {
   background: $secondary-color;
   color: white;
 }
@@ -24,9 +25,7 @@ body {
 a {
   border-bottom: 1px solid $tertiary-color;
   color: $interactive-color;
-  -o-transition: color, .2s;
-  -webkit-transition: color, .2s;
-  transition: color, .2s;
+  transition: color, 0.2s;
 
   &:hover {
     border-bottom: 2px solid $tertiary-color;
@@ -67,7 +66,8 @@ dd {
 }
 
 // Basic wrapping, smaller font-size, bg, etc. for code.
-pre, code{
+pre,
+code {
   background-color: $tertiary-color;
   white-space: pre-wrap;
   font-size: 0.8rem;
@@ -113,7 +113,7 @@ acronym {
 }
 
 // Nice, subtle, clean <hr>s
-hr{
+hr {
   display: block;
   margin: 2rem auto;
   padding: 0;
@@ -130,7 +130,7 @@ hr:after {
   color: $butler-color;
   display: inline;
   padding: 0 1rem;
-  content: "* * *";
+  content: '* * *';
   font-size: 1.563rem;
   line-height: 0;
   background-color: $bg-color;
@@ -142,7 +142,7 @@ hr.plain-hr:after {
 }
 
 // So tables don’t look like a lumber yard…
-tr:nth-child(odd){
+tr:nth-child(odd) {
   background-color: $tertiary-color;
 }
 
@@ -150,7 +150,8 @@ thead {
   border-bottom: 1px solid $bg-color;
 }
 
-td, th {
+td,
+th {
   padding: 0.25rem 0.5rem;
 }
 
