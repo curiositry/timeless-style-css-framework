@@ -1,4 +1,4 @@
-// ◊ASIDES
+// ASIDES
 // --------------
 // This component lets you use the <aside> tag in an article for snide comments
 // or to provide more details or context. Add "note" class to add a stylized
@@ -41,19 +41,19 @@ aside p:last-of-type {
 
 aside.full,
 aside.full-width {
-  @include respond-to(md){
+  @include respond-to(md) {
     margin: 1rem 0 2rem 0;
   }
 }
 
-aside.note:before{
+aside.note:before {
   position: relative;
   font-family: $interface-font-stack;
   font-weight: 900;
   color: $tertiary-color;
   bottom: 0.5rem;
   right: 1.5rem;
-  content: "*";
+  content: '*';
   font-size: 3.054rem;
   line-height: 0;
   float: left;
