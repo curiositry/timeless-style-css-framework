@@ -1,11 +1,9 @@
-/**
-* ◊TYPOGRAPHY
-* -----------
-* NOTE: The typographic boilerplate I’m using encorporates 
-* slightly modified version of the Typeplate typescale mixins.
-* Check out typeplate at: www.typeplate.com
-* It uses a major third typescale. */
-
+// TYPOGRAPHY
+// -----------
+// NOTE: The typographic boilerplate I’m using encorporates
+// slightly modified version of the Typeplate typescale mixins.
+// Check out typeplate at: www.typeplate.com
+// It uses a major third typescale.
 
 // Start with the basics
 body {
@@ -13,10 +11,12 @@ body {
   line-height: $line-height;
   font-weight: $base-font-weight;
   font-size: 16px;
-  @include respond-to(sm){
+
+  @include respond-to(sm) {
     font-size: 18px;
   }
-  @include respond-to(md){
+
+  @include respond-to(md) {
     font-size: 21px;
   }
 }
@@ -26,7 +26,12 @@ body {
 @include type-headings-style;
 
 // Base header styles
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $header-font-stack;
   color: $secondary-color;
   font-weight: 700;
@@ -35,16 +40,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Nice margins to match header sizing
-h1, h2 {
+h1,
+h2 {
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
-h3, h4 {
+h3,
+h4 {
   margin-bottom: 1.5rem;
 }
 
-h5, h6 {
+h5,
+h6 {
   @extend .smcp;
 }
 
@@ -54,7 +62,7 @@ p {
 }
 
 // Put meta kinds of things in sans-serif
-footer, 
+footer,
 aside {
   font-family: $interface-font-stack;
 }
