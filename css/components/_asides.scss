@@ -1,23 +1,22 @@
-/**
-* ◊ASIDES
-* --------------
-* This component lets you use the <aside> tag in an article for snide comments 
-* or to provide more details or context. Add "note" class to add a stylized 
-* astrisk to the corner of the box.
-*/
+// ◊ASIDES
+// --------------
+// This component lets you use the <aside> tag in an article for snide comments
+// or to provide more details or context. Add "note" class to add a stylized
+// astrisk to the corner of the box.
+
 
 aside {
+  background-color: #fff;
   font-family: $interface-font-stack;
   font-size: 1rem;
-  background-color: #fff;
   padding: 1rem;
   border: 1px solid $butler-color;
-  
+
   @include respond-to(md) {
     width: 40%;
     float: right;
     margin-right: 0;
-    margin:1rem;
+    margin: 2rem 0 1rem 1rem;
     position: relative;
     left: 0.5rem;
   }
