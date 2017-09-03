@@ -1,12 +1,9 @@
-/**
-* ◊IMAGE GALLERY 
-* --------------
-* This provides a component for a responsive image gallery, that uses Flexbox.
-* Each gallery instance will take up the full available width,
-* and scale the image thumbnails accordingly.
-* Can be used with figures and figcaptions, or with images enclosed in DIVs.
-*/
-
+// IMAGE GALLERY
+// --------------
+// This provides a component for a responsive image gallery, that uses Flexbox.
+// Each gallery instance will take up the full available width,
+// and scale the image thumbnails accordingly.
+// Can be used with figures and figcaptions, or with images enclosed in DIVs.
 
 .gallery {
   display: flex;
@@ -14,7 +11,6 @@
 }
 
 .gallery div:first-child {
-
 }
 
 .gallery div {
@@ -27,5 +23,5 @@
   height: auto;
   max-width: 100%;
   max-height: 130px;
-  cursor:-webkit-zoom-in;
+  cursor: -webkit-zoom-in;
 }

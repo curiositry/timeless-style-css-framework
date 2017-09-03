@@ -1,10 +1,8 @@
-/**
-* ◊FUNCTIONS
-* ----------
-* NOTE: the "type-measure-margin()" function is adapted from Typeplate.
-* Typeplate is a neat MIT licenced starter kit, but more complex than I needed.
-* Find it here: http://github.com/typeplate/starter-kit
-*/
+// FUNCTIONS
+// ----------
+// NOTE: the "type-measure-margin()" function is adapted from Typeplate.
+// Typeplate is a neat MIT licenced starter kit, but more complex than I needed.
+// Find it here: http://github.com/typeplate/starter-kit
 
 // Divide 1 unit of $measure by $font-size; return relative value
 @function type-measure-margin($scale, $measure, $value) {

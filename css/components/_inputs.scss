@@ -1,10 +1,8 @@
-/**
-* INPUTS
-* ---------
-* Base styling for non-atrocious inputs and textareas
-*/
+// INPUTS
+// ---------
+// Base styling for non-atrocious inputs and textareas
 
-input, 
+input,
 button,
 textarea {
   width: 100%;
@@ -13,7 +11,7 @@ textarea {
   border: 1px solid $butler-color;
   box-shadow: none;
   font-family: $interface-font-stack;
-  @include respond-to(sm){
+  @include respond-to(sm) {
     width: auto;
   }
 }

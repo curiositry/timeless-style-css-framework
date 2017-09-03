@@ -1,17 +1,15 @@
-/**
-* ◊HELPERS
-* -------
-* Helpful classes for quick layout tweaks and hacks
-*/
+// HELPERS
+// -------
+// Helpful classes for quick layout tweaks and hacks
 
 // Yep, about what it sounds like
-.inline{
+.inline {
   display: inline;
 }
 
 // Center all the things
-.center-text{
-  text-align: center;  
+.center-text {
+  text-align: center;
 }
 
 // Bouyancy
@@ -25,18 +23,18 @@
 
 // Use small caps (if available)
 .sc {
-  -moz-font-feature-settings: "smcp=1";
-  -moz-font-feature-settings: "smcp";
-  -ms-font-feature-settings: "smcp";
-  -webkit-font-feature-settings: "smcp";
-  -o-font-feature-settings: "smcp";
-  font-feature-settings: "smcp";
+     -moz-font-feature-settings: 'smcp=1';
+     -moz-font-feature-settings: 'smcp';
+      -ms-font-feature-settings: 'smcp';
+  -webkit-font-feature-settings: 'smcp';
+       -o-font-feature-settings: 'smcp';
+          font-feature-settings: 'smcp';
 }
 
 // The ol’ clearfix hack
 .cf:before,
 .cf:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -127,7 +125,7 @@
 
 // Pretty pretty ampersands
 .amp {
-  font-style:italic;
-  font-weight:400;
+  font-style: italic;
+  font-weight: 400;
   font-family: 'Libre Baskerville', Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
 }
