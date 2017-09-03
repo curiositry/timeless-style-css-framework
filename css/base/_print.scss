@@ -1,26 +1,23 @@
-/**
-* PRINT STYLES
-* ------------
-* This file sets some sane defaults for printing. 
-*/
+// PRINT STYLES
+// ------------
+// This file sets some sane defaults for printing.
 
-@media print{
-  
+@media print {
   // Black and white for better contrast
   body {
     background: #fff;
     color: #000;
-    font-size:12pt;
+    font-size: 12pt;
   }
 
   // Make it so readers can find out where a link pointed
-  p a:after {
-    content: " (" attr(href) ")";
+  p a::after {
+    content: ' (' attr(href) ')';
     font-size: 80%;
   }
-  
+
   // Clearing the clutter
-  hr:after {
+  hr::after {
     display: none;
   }
 
@@ -28,5 +25,4 @@
   @page {
     margin: 3cm;
   }
-  
 }
