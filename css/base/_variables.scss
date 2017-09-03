@@ -11,8 +11,7 @@ $active-color: #ff5335;
 // The three main colours
 $primary-color: #152a38;
 $secondary-color: #29435c;
-$tertiary-color:  #d1d4c9;
-
+$tertiary-color: #d1d4c9;
 $c1: $primary-color;
 $c2: $secondary-color;
 $c3: $tertiary-color;
@@ -47,11 +46,9 @@ $font-size: 112.5 !default;
 $font-base: 16 * ($font-size/100) !default;
 $measure: $font-base * $line-height !default;
 $base-font-weight: 400 !default;
-
 $font-adjust-sm: 0.5;
 $font-adjust-md: 0.8;
 $font-adjust-lg: 1;
-
 $x-height-offset: 0.25rem;
 
 
@@ -93,7 +90,6 @@ $type-scale: (
   sassisfy-epsilon: 18,
   sassisfy-zeta: 14.4,
 ) !default;
-
 $type-headings: (
   h1: sassisfy-alpha,
   h2: sassisfy-beta,
