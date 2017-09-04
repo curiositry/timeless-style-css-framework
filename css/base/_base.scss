@@ -62,18 +62,23 @@ dt {
   font-weight: bold;
 }
 
+pre,
+code,
+kbd {
+  font-family: $mono-font-stack;
+  // font-size: 1rem;
+}
+
 // Basic wrapping, smaller font-size, bg, etc. for code.
 pre,
 code {
   background-color: $tertiary-color;
   white-space: pre-wrap;
-  font-size: 0.8rem;
-  font-family: $mono-font-stack;
   border: none;
 }
 
 pre {
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 1rem;
   border: 1px solid tint($active-color, 20);
 }
 
@@ -85,7 +90,7 @@ code {
 // Bye bye hideous yellow…
 mark {
   background-color: $tertiary-color;
-  padding: 0.2rem 0.5rem;
+  padding: 0 0.5rem 0.25rem 0.5rem;
   box-shadow: 0 0 0.25rem 0 $tertiary-color;
 }
 
@@ -128,7 +133,7 @@ hr:after {
   display: inline;
   padding: 0 1rem;
   content: '* * *';
-  font-size: 1.563rem;
+  font-size: 2rem;
   line-height: 0;
   background-color: $bg-color;
 }
@@ -140,7 +145,7 @@ hr.plain-hr:after {
 
 // So tables don’t look like a lumber yard…
 tr:nth-child(odd) {
-  background-color: $tertiary-color;
+  background-color: tint($butler-color, 25);
 }
 
 thead {
@@ -149,7 +154,9 @@ thead {
 
 td,
 th {
+  text-align: left;
   padding: 0.25rem 0.5rem;
+  border: 1px solid $butler-color;
 }
 
 // Give inline items breating room;
