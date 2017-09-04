@@ -11,6 +11,10 @@ figure:not(.plain-figure) {
   text-align: center;
 }
 
+img:has(+ figcaption) { // not supported yet...
+  margin-bottom: 0;
+}
+
 figcaption {
   font-family: $interface-font-stack;
   font-size: 0.8rem;
