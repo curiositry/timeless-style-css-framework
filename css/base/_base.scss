@@ -24,6 +24,7 @@ body {
 
 a {
   border-bottom: 1px solid $tertiary-color;
+  text-decoration: none;
   color: $interactive-color;
   transition: color, 0.2s;
 
