@@ -1,173 +1,253 @@
-/*! sanitize.css v3.0.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
 
-$root-background-color: #FFFFFF !default;
-$root-box-sizing: border-box !default;
-$root-color: #000000 !default;
-$root-cursor: default !default;
-$root-font-family: sans-serif !default;
-$root-font-size: 100% !default;
-$root-line-height: 1.5 !default;
-$root-text-rendering: optimizeLegibility !default;
+/* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
+   ========================================================================== */
 
-$anchor-text-decoration: none !default;
-$background-repeat: no-repeat !default;
-$form-element-background-color: transparent !default;
-$form-element-min-height: if(unitless($root-line-height), #{$root-line-height}em, if(unit($root-line-height) != '%', $root-line-height, null)) !default;
-$media-element-vertical-align: middle !default;
-$monospace-font-family: monospace !default;
-$nav-list-style: none !default;
-$selection-background-color: #B3D4FC !default;
-$selection-color: #ffffff !default;
-$selection-text-shadow: none !default;
-$small-font-size: 75% !default;
-$table-border-collapse: collapse !default;
-$table-border-spacing: 0 !default;
-$textarea-resize: vertical !default;
-
-
-
-/*
- * Normalization
+/**
+ * 1. Remove repeating backgrounds in all browsers (opinionated).
+ * 2. Add box sizing inheritence in all browsers (opinionated).
  */
 
-audio:not([controls]) {
-  display: none; // Chrome 44-, iOS 8+, Safari 9+
+*,
+::before,
+::after {
+	background-repeat: no-repeat; /* 1 */
+	box-sizing: inherit; /* 2 */
 }
 
-button {
-  overflow: visible; // Internet Explorer 11-
-  -webkit-appearance: button; // iOS 8+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritence in all browsers (opinionated).
+ */
+
+::before,
+::after {
+	text-decoration: inherit; /* 1 */
+	vertical-align: inherit; /* 2 */
 }
 
-details {
-  display: block; // Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
-}
+/**
+ * 1. Add border box sizing in all browsers (opinionated).
+ * 2. Add the default cursor in all browsers (opinionated).
+ * 3. Prevent font size adjustments after orientation changes in IE and iOS.
+ */
 
 html {
-  -ms-overflow-style: -ms-autohiding-scrollbar; // Edge 12+, Internet Explorer 11-
-  overflow-y: scroll; // All browsers without overlaying scrollbars
-  -webkit-text-size-adjust: 100%; // iOS 8+
+	box-sizing: border-box; /* 1 */
+	cursor: default; /* 2 */
+	-ms-text-size-adjust: 100%; /* 3 */
+	-webkit-text-size-adjust: 100%; /* 3 */
 }
 
-input {
-  -webkit-border-radius: 0; // iOS 8+
+/* Sections (https://html.spec.whatwg.org/multipage/semantics.html#sections)
+   ========================================================================== */
 
-  &[type="button"], &[type="reset"], &[type="submit"] {
-    -webkit-appearance: button; // iOS 8+
-  }
+/**
+ * Add the correct display in IE 9-.
+ */
 
-  &[type="number"] {
-    width: auto; // Firefox 36+
-  }
-
-  &[type="search"] {
-    -webkit-appearance: textfield; // Chrome 45+, Safari 9+
-
-    &::-webkit-search-cancel-button,
-    &::-webkit-search-decoration {
-      -webkit-appearance: none; // Chrome 45+, Safari 9+
-    }
-  }
+article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block;
 }
 
-main {
-  display: block; // Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+	margin: 0;
 }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: .67em 0;
+}
+
+/* Grouping content (https://html.spec.whatwg.org/multipage/semantics.html#grouping-content)
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+	display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+	margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+	box-sizing: content-box; /* 1 */
+	height: 0; /* 1 */
+	overflow: visible; /* 2 */
+}
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+
+nav ol,
+nav ul {
+	list-style: none;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
 pre {
-  overflow: auto; // Internet Explorer 11-
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 
-progress {
-  display: inline-block; // Internet Explorer 11-, Windows Phone 8.1+
-}
+/* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
+   ========================================================================== */
 
-small {
-  font-size: $small-font-size; // All browsers
-}
-
-summary {
-  display: block; // Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+
-}
-
-svg:not(:root) {
-  overflow: hidden; // Internet Explorer 11-
-}
-
-template {
-  display: none; // Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+
-}
-
-textarea {
-  overflow: auto; // Edge 12+, Internet Explorer 11-
-}
-
-[hidden] {
-  display: none; // Internet Explorer 10-
-}
-
-/*
- * Universal inheritance
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
-
-*,
-::before,
-::after {
-  box-sizing: inherit;
-}
-
-* {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-::before,
-::after {
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-
-
-
-/*
- * Opinionated defaults
- */
-
-// specify the border style and width of all elements
-
-*,
-::before,
-::after {
-  border-style: solid;
-  border-width: 0;
-}
-
-// specify the core styles of all elements
-
-* {
-  background-repeat: $background-repeat;
-  margin: 0;
-  padding: 0;
-}
-
-// specify the root styles of the document
-
-:root {
-  background-color: $root-background-color;
-  box-sizing: $root-box-sizing;
-  color: $root-color;
-  cursor: $root-cursor;
-  font: #{$root-font-size}/#{$root-line-height} $root-font-family;
-  text-rendering: $root-text-rendering;
-}
-
-// specify the text decoration of anchors
 
 a {
-  text-decoration: $anchor-text-decoration;
+	background-color: transparent; /* 1 */
+	-webkit-text-decoration-skip: objects; /* 2 */
 }
 
-// specify the alignment of media elements
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+	font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+	font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+	background-color: #ffff00;
+	color: #000000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+sup {
+	top: -.5em;
+}
+
+/*
+ * Remove the text shadow on text selections (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow (opinionated).
+ */
+
+::-moz-selection {
+	background-color: #b3d4fc; /* 1 */
+	color: #000000; /* 1 */
+	text-shadow: none;
+}
+
+::selection {
+	background-color: #b3d4fc; /* 1 */
+	color: #000000; /* 1 */
+	text-shadow: none;
+}
+
+/* Embedded content (https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content)
+   ========================================================================== */
+
+/*
+ * Change the alignment on media elements in all browers (opinionated).
+ */
 
 audio,
 canvas,
@@ -175,138 +255,334 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: $media-element-vertical-align;
+	vertical-align: middle;
 }
 
-// specify the background color of form elements
+/**
+ * Add the correct display in IE 9-.
+ */
 
-button,
-input,
-select,
-textarea {
-  background-color: $form-element-background-color;
+audio,
+video {
+	display: inline-block;
 }
 
-// specify the inherited color and font of form elements
+/**
+ * Add the correct display in iOS 4-7.
+ */
 
-button,
-input,
-select,
-textarea {
-  color: inherit;
-  font-family: inherit;
-  font-style: inherit;
-  font-weight: inherit;
+audio:not([controls]) {
+	display: none;
+	height: 0;
 }
 
-// specify the minimum height of form elements
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
 
-button,
-[type="button"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="reset"],
-[type="search"],
-[type="submit"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
-select,
-textarea {
-  min-height: $form-element-min-height;
+img {
+	border-style: none;
 }
 
-// specify the font family of code elements
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
 
-code,
-kbd,
-pre,
-samp {
-  font-family: $monospace-font-family, monospace;
+svg {
+	fill: currentColor;
 }
 
-// specify the list style of nav lists
+/**
+ * Hide the overflow in IE.
+ */
 
-nav ol,
-nav ul {
-  list-style: $nav-list-style;
+svg:not(:root) {
+	overflow: hidden;
 }
 
-// specify the standard appearance of selects
+/* Tabular data (https://html.spec.whatwg.org/multipage/tables.html#tables)
+   ========================================================================== */
 
-select {
-  -moz-appearance: none;    // Firefox 40+
-  -webkit-appearance: none; // Chrome 45+
-
-  &::-ms-expand {
-    display: none;        // Edge 12+, Internet Explorer 11-
-  }
-
-  &::-ms-value {
-    color: currentColor;  // Edge 12+, Internet Explorer 11-
-  }
-}
-
-// specify the border styling of tables
+/**
+ * Collapse border spacing
+ */
 
 table {
-  border-collapse: $table-border-collapse;
-  border-spacing: $table-border-spacing;
+	border-collapse: collapse;
 }
 
-// specify the resizability of textareas
+/* Forms (https://html.spec.whatwg.org/multipage/forms.html#forms)
+   ========================================================================== */
+
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+}
+
+/**
+ * Inherit styling in all browsers (opinionated).
+ */
+
+button,
+input,
+select,
+textarea {
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+	box-sizing: border-box; /* 1 */
+	color: inherit; /* 2 */
+	display: table; /* 1 */
+	max-width: 100%; /* 1 */
+	padding: 0; /* 3 */
+	white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+	display: inline-block; /* 1 */
+	vertical-align: baseline; /* 2 */
+}
+
+/**
+ * 1. Remove the default vertical scrollbar in IE.
+ * 2. Change the resize direction on textareas in all browsers (opinionated).
+ */
 
 textarea {
-  resize: $textarea-resize;
+	overflow: auto; /* 1 */
+	resize: vertical; /* 2 */
 }
 
-// specify the background color, font color and drop shadow of text selections
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
 
-::-moz-selection {
-  background-color: $selection-background-color; // required when declaring ::selection
-  color: $selection-color;
-  text-shadow: $selection-text-shadow;
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
 }
 
-::selection {
-  background-color: $selection-background-color; // required when declaring ::selection
-  color: $selection-color;
-  text-shadow: $selection-text-shadow;
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
 }
 
-// specify the progress cursor of updating elements
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/* Interactive elements (https://html.spec.whatwg.org/multipage/forms.html#interactive-elements)
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+	display: list-item;
+}
+
+/* Scripting (https://html.spec.whatwg.org/multipage/scripting.html#scripting-3)
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+	display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+	display: none;
+}
+
+/* User interaction (https://html.spec.whatwg.org/multipage/interaction.html#editing)
+   ========================================================================== */
+
+/*
+ * Remove the tapping delay on clickable elements (opinionated).
+ * 1. Remove the tapping delay in IE 10.
+ */
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+	-ms-touch-action: manipulation; /* 1 */
+	touch-action: manipulation;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+	display: none;
+}
+
+/* ARIA (https://w3c.github.io/html-aria/)
+   ========================================================================== */
+
+/**
+ * Change the cursor on busy elements (opinionated).
+ */
 
 [aria-busy="true"] {
-  cursor: progress;
+	cursor: progress;
 }
 
-// specify the pointer cursor of trigger elements
+/*
+ * Change the cursor on control elements (opinionated).
+ */
 
 [aria-controls] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
-// specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements
+/*
+ * Change the display on visually hidden accessible elements (opinionated).
+ */
+
+[aria-hidden="false"][hidden]:not(:focus) {
+	clip: rect(0, 0, 0, 0);
+	display: inherit;
+	position: absolute;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements (opinionated).
+ */
 
 [aria-disabled] {
-  cursor: default;
-}
-
-// specify the style of visually hidden yet accessible elements
-
-[hidden][aria-hidden="false"] {
-  clip: rect(0 0 0 0);
-  display: inherit;
-  position: absolute;
-
-  &:focus {
-    clip: auto;
-  }
+	cursor: default;
 }
