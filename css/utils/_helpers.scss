@@ -21,24 +21,14 @@
   float: right;
 }
 
-// Use small caps (if available)
-.sc {
-     -moz-font-feature-settings: 'smcp=1';
-     -moz-font-feature-settings: 'smcp';
-      -ms-font-feature-settings: 'smcp';
-  -webkit-font-feature-settings: 'smcp';
-       -o-font-feature-settings: 'smcp';
-          font-feature-settings: 'smcp';
-}
-
 // The ol’ clearfix hack
-.cf:before,
-.cf:after {
+.cf::before,
+.cf::after {
   content: ' ';
   display: table;
 }
 
-.cf:after {
+.cf::after {
   clear: both;
 }
 
@@ -112,7 +102,6 @@
 .serif {
   font-family: $text-font-stack;
 }
-
 
 // Colours
 .tertiary-bg {
