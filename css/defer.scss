@@ -1,10 +1,9 @@
-/**
-* DEFER.SCSS
-* ----------
-* Where you get to do fancy things without affecting performance.
-*
-* This file get’s loaded after the DOM is complete, using JS. It should contain * things that are below the fold and/or ornamental. 
-*/
+// DEFER.SCSS
+// ----------
+// Where you get to do fancy things without affecting performance.
+//
+// This file gets loaded after the DOM is complete, using JS. It should contain
+// things that are below the fold and/or ornamental.
 
 // Import fontawesome.
 @import 'vendor/fontawesome/font-awesome';
