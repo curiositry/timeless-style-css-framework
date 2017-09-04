@@ -1,7 +1,7 @@
 // This is our basic button
-button,
-.btn,
-input[type=submit] {
+button:not([disabled]),
+.btn:not([disabled]),
+input[type=submit]:not([disabled]) {
   @include gradient($tertiary-color,
                     mix($tertiary-color, $primary-color, 90)
                    );
