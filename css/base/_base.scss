@@ -4,6 +4,12 @@
   margin-top: 1rem;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $bg-color;
   margin-top: 0;
