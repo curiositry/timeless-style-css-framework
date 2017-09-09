@@ -12,7 +12,7 @@ aside {
   padding: 1rem;
   border: 1px solid $butler-color;
 
-  @include respond-to(md) {
+  @include bp(md) {
     width: 40%;
     float: right;
     margin-right: 0;
@@ -41,7 +41,7 @@ aside p:last-of-type {
 
 aside.full,
 aside.full-width {
-  @include respond-to(md) {
+  @include bp(md) {
     margin: 1rem 0 2rem 0;
   }
 }

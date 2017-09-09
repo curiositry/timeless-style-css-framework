@@ -15,7 +15,7 @@
 }
 
 %pull {
-  @include respond-to(lg) {
+  @include bp(lg) {
     float: right;
     width: 40%;
   }

@@ -9,7 +9,7 @@
 
 .subscribe form {
   text-align: center;
-  @include respond-to(sm) {
+  @include bp(sm) {
     text-align: left;
     display: flex;
   }
@@ -21,7 +21,7 @@
   &:focus {
     border-left: 3px solid $active-color;
   }
-  @include respond-to(sm) {
+  @include bp(sm) {
     width: calc(100% - 20rem);
     flex: 3;
   }
@@ -29,7 +29,7 @@
 
 .subscribe button[type='submit'] {
   width: 100%;
-  @include respond-to(sm) {
+  @include bp(sm) {
     flex: 1;
   }
 }
@@ -42,7 +42,7 @@
   padding-right: 1.5rem;
   margin-top: -0.5rem;
   opacity: 0.3;
-  @include respond-to(sm) {
+  @include bp(sm) {
     display: inline;
   }
 }

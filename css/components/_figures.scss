@@ -28,7 +28,7 @@ figure.thumb {
   margin: 1rem auto;
   line-height: 1;
 
-  @include respond-to(sm) {
+  @include bp(sm) {
     float: right;
     max-width: 225px;
     margin: 0.5rem 0 0.5rem 1rem;

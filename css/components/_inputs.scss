@@ -11,7 +11,7 @@ textarea {
   border: 1px solid $butler-color;
   box-shadow: none;
   font-family: $interface-font-stack;
-  @include respond-to(sm) {
+  @include bp(sm) {
     width: auto;
   }
 }
