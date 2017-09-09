@@ -1,27 +1,61 @@
 // IMAGE GALLERY
 // --------------
-// This provides a component for a responsive image gallery, that uses Flexbox.
-// Each gallery instance will take up the full available width,
-// and scale the image thumbnails accordingly.
-// Can be used with figures and figcaptions, or with images enclosed in DIVs.
+// A responsive image gallery component using CSS grid layout.
+//
+// * Each gallery instance takes up the full available width;
+// * Images are arranged into a responsive grid of thumbnails;
+// * Combines nicely with a lightbox plugin;
+// * Use with figures + figcaptions, or with plain images;
+// * Default of 4 columns can be changed with the "data-columns" attribute.
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  // Let the magic begin...
+  display: grid;
+
+  // Centre everything
+  justify-content: center;
+  justify-items: center;
+
+  // align-content: center;
+  // align-items: center;
+
+  // Give us four columns by default...
+  grid-template-columns: repeat(4, auto);
 }
 
-.gallery div:first-child {
+// ...unless the column count is specified like so:
+// <div class="gallery" data-columns="3">
+@for $i from 1 through 12 {
+  .gallery[data-columns="#{$i}"] {
+    grid-template-columns: repeat($i, auto);
+  }
 }
 
-.gallery div {
+.gallery > img,
+.gallery > figure,
+.gallery > div {
+  // On mobile, each image spans all columns
+  grid-column: 1 / -1;
+
+  @include bp(md) {
+    grid-column: auto / auto;
+  }
+
+  padding: 0.5rem;
   margin: 0;
-  margin: 0.5rem auto;
 }
 
 .gallery img {
   width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 130px;
+  margin: 0;
+
+  // This would make them all the same height.
+  // May be more aesthetically pleasing, but wouldn’t be as robust
+  // at handling different sizes and aspect ratios...
+
+  // max-height: 150px;
+
+  // Thumbnails should be links to fullsize versions / trigger lightbox
   cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
