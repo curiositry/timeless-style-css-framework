@@ -7,7 +7,7 @@
 // Find it here: http://github.com/typeplate/starter-kit
 
 /// Solid little media query mixin with four options
-@mixin respond-to($point) {
+@mixin bp($point) {
   @if $point == lg {
     @media all and (min-width: 960px) { // Desktop+
       @content;
@@ -32,11 +32,11 @@
     font-size: $scale * 1px;
     font-size: (($scale/$base) * 0.8) + $value;
 
-    @include respond-to(md) {
+    @include bp(md) {
       font-size: $scale * 1px;
       font-size: (($scale/$base) * 0.8) + $value;
     }
-    @include respond-to(lg) {
+    @include bp(lg) {
       font-size: $scale * 1px;
       font-size: (($scale/$base) * 1) + $value;
     }
