@@ -1,44 +1,39 @@
-// This is our basic button
+// Our basic button
 button:not([disabled]),
 .btn:not([disabled]),
 input[type=submit]:not([disabled]) {
-  @include gradient($tertiary-color,
-                    mix($tertiary-color, $primary-color, 90)
-                   );
+  background-color: $tertiary-color;
+  background-image: linear-gradient(to bottom right, $tertiary-color, adjust-hue(darken($tertiary-color, 15), -25%));
   padding: 0.5rem 0.8rem;
   color: $primary-color;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
-  border: 1px solid $interactive-color;
+  border: 1px solid darken($tertiary-color, 15);
   border-radius: 0.15rem;
   transition: 0.3s;
 
   &:hover {
-    @include gradient(adjust-hue($interactive-color, 10%),
-                      adjust-hue($active-color, 10%)
-                     );
-    box-shadow: 0 0 0.5rem 0 $primary-color inset;
+    background-color: $secondary-color;
+    background-image: linear-gradient(to bottom right, $secondary-color, adjust-hue($secondary-color, -25%));
     color: $bg-color !important;
-    border: 1px solid $active-color;
+    border: 1px solid $primary-color;
     box-shadow: 0 0 0.5rem -0.15rem $primary-color inset;
-
     transition: 0.3s;
   }
 }
 
-// And this is our red hot chilli peppers button
-.btn--cta {
-  @include gradient($interactive-color,
-                    mix($interactive-color, black, 75)
-                   );
+// A bold call-to-action button
+.btn--cta:not([disabled]) {
+  background-color: $interactive-color;
+  background-image: linear-gradient(to bottom right, $interactive-color, darken($interactive-color, 5));
   color: $bg-color;
-  border: 1px solid $tertiary-color;
+  border: 1px solid darken($interactive-color, 10);
 
   &:hover {
-    @include gradient(adjust-hue($interactive-color, 10%),
-                      adjust-hue($active-color, 10%)
-                     );
+    background-color: $active-color;
+    background-image: linear-gradient(to bottom right, adjust-hue($active-color, 10%), $active-color);
     box-shadow: 0 0 0.5rem -0.15rem $primary-color inset;
+    border: 1px solid darken($active-color, 10);
   }
 }
