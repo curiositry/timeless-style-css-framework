@@ -133,19 +133,18 @@ hr {
 
 // With special sauce…
 hr:after {
-  position: relative;
-  bottom: 0.5rem;
+  vertical-align: top;
   color: $butler-color;
   display: inline;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   content: '* * *';
   font-size: 2rem;
-  line-height: 0;
+  line-height: 0.33;
   background-color: $bg-color;
 }
 
 // … or not!
-hr.plain-hr:after {
+hr.plain:after {
   display: none;
 }
 
