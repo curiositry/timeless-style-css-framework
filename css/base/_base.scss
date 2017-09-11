@@ -85,7 +85,7 @@ code {
 
 pre {
   padding: 0.5rem 1rem;
-  border: 1px solid tint($active-color, 20);
+  border: 1px solid mix($active-color, white, 20);
 }
 
 // Give it some space
@@ -150,7 +150,7 @@ hr.plain:after {
 
 // So tables don’t look like a lumber yard…
 tr:nth-child(odd) {
-  background-color: tint($butler-color, 25);
+  background-color: mix($butler-color, white, 25);
 }
 
 thead {
