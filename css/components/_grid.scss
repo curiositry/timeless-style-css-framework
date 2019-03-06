@@ -1,0 +1,35 @@
+// CSS GRID (USING GRID LAYOUT)
+// ----------------------------
+// A responsive css grid component using CSS grid layout.
+
+.grid {
+  padding: 1rem;
+  // Let the magic begin...
+  display: grid;
+  grid-auto-rows: min-content;
+
+  justify-content: center;
+
+  // Give us 3 columns by default...
+  grid-template-columns: repeat(3, 1fr);
+
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+// ...unless the column count is specified like so:
+// <div class="grid" data-columns="3">
+@for $i from 1 through 12 {
+  .grid[data-columns="#{$i}"] {
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+.grid > * {
+  // On mobile, each grid item spans all columns
+  grid-column: 1 / -1;
+
+  @include bp(md) {
+    grid-column: auto / auto;
+  }
+}
