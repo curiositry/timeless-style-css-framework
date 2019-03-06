@@ -1,4 +1,4 @@
-// Pullquotes
+// Semantic Pullquotes
 document.addEventListener("DOMContentLoaded", function(event) {
   function pullQuote(el){
     var parentParagraph = el.parentNode;
