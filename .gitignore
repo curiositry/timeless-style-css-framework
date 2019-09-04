@@ -1,5 +1,9 @@
+.gitignore
 .sass-cache/
 css/main.css
 css/defer.css
+css/defer.css.map
+css/main.css.map
+css/components/_navigation.scss
+TODO.txt
 examples
-css/vendor/_typegreat*
