@@ -61,6 +61,15 @@ p {
   font-family: $text-font-stack;
 }
 
+// p {
+//   text-indent: 1.5em;
+// }
+
+// p:first-of-type,
+// hr + p {
+//   text-indent: 0;
+// }
+
 %dropcap {
   color: $secondary-color;
   text-transform: uppercase;
