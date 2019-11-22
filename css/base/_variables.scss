@@ -40,10 +40,12 @@ $mfs: $mono-font-stack;
 $container-width: 800px;
 
 // TYPOGRAPHY VARIABLES
+$phi: 1.618;
 
-$line-height: 1.5 !default;
-$font-size: 112.5 !default;
-$font-base: 16 * ($font-size/100) !default;
+$line-height: $phi !default;
+// $font-size: 112.5 !default;
+// $font-base: 16 * ($font-size/100) !default;
+$font-base: 21 !default;
 $measure: $font-base * $line-height !default;
 $base-font-weight: 400 !default;
 $font-adjust-sm: 0.5;
@@ -66,6 +68,60 @@ $x-height-offset: 0.25rem;
 // REM values: 0.41, 0.512, 0.64, 0.8, 1, 1.25, 1.563, 1.954,
 //          2.443, 3.054, 3.818, 4.773, 5.966, 7.458, 9.323
 
+// Output using Phi as our scale:
+// 0.146
+// 0.236
+// 0.382
+// 0.618
+// 1
+// 1.618
+// 2.618
+// 4.236
+// 6.854
+// 11.09
+// 17.944
+// 29.033
+// 46.975
+// 76.006
+// 122.978
+
+
+$type-scale: (
+  sassisfy-tera: 29.033,
+  sassisfy-giga: 17.944,
+  sassisfy-mega: 11.09,
+  sassisfy-alpha: $font-base * ($phi * 2),
+  sassisfy-beta: $font-base * pow($phi, 1.5),
+  sassisfy-gamma: $font-base * $phi,
+  sassisfy-delta: $font-base * pow($phi, 0.5),
+  sassisfy-epsilon: $font-base,
+  sassisfy-zeta: $font-base / pow($phi, 0.5),
+) !default;
+
+
+// $type-scale: (
+//   sassisfy-tera: 29.033,
+//   sassisfy-giga: 17.944,
+//   sassisfy-mega: 11.09,
+//   sassisfy-alpha: 6.854,
+//   sassisfy-beta: 4.236,
+//   sassisfy-gamma: 2.618,
+//   sassisfy-delta: 1.618,
+//   sassisfy-epsilon: 1,
+//   sassisfy-zeta: 0.618,
+// ) !default;
+
+// $type-scale: (
+//   sassisfy-tera: 85.83,
+//   sassisfy-giga: 68.664,
+//   sassisfy-mega: 54.931,
+//   sassisfy-alpha: 43.945,
+//   sassisfy-beta: 35.156,
+//   sassisfy-gamma: 28.125,
+//   sassisfy-delta: 22.5,
+//   sassisfy-epsilon: 18,
+//   sassisfy-zeta: 14.4,
+// ) !default;
 
 // $type-scale: (
 //   sassisfy-tera: 4.773,
@@ -78,23 +134,24 @@ $x-height-offset: 0.25rem;
 //   sassisfy-epsilon: 1,
 //   sassisfy-zeta: 0.8,
 // ) !default;
+//
+// $type-scale: (
+//   sassisfy-tera: 85.83,
+//   sassisfy-giga: 68.664,
+//   sassisfy-mega: 54.931,
+//   sassisfy-alpha: 43.945,
+//   sassisfy-beta: 35.156,
+//   sassisfy-gamma: 28.125,
+//   sassisfy-delta: 22.5,
+//   sassisfy-epsilon: 18,
+//   sassisfy-zeta: 14.4,
+// ) !default;
 
-$type-scale: (
-  sassisfy-tera: 85.83,
-  sassisfy-giga: 68.664,
-  sassisfy-mega: 54.931,
-  sassisfy-alpha: 43.945,
-  sassisfy-beta: 35.156,
-  sassisfy-gamma: 28.125,
-  sassisfy-delta: 22.5,
-  sassisfy-epsilon: 18,
-  sassisfy-zeta: 14.4,
-) !default;
 $type-headings: (
   h1: sassisfy-alpha,
   h2: sassisfy-beta,
   h3: sassisfy-gamma,
   h4: sassisfy-delta,
-  h5: sassisfy-delta,
-  h6: sassisfy-delta
+  h5: sassisfy-epsilon,
+  h6: sassisfy-zeta
 ) !default;
