@@ -6,6 +6,11 @@
 // things that are below the fold and/or ornamental.
 
 // Import fontawesome.
-@import 'vendor/fontawesome/font-awesome';
+@import 'vendor/fontawesome/fontawesome.scss';
+@import 'vendor/fontawesome/regular.scss';
+@import 'vendor/fontawesome/solid.scss';
+@import 'vendor/fontawesome/brands.scss';
+
+
 
 // This is a good place to put @font-face declarations if you’re using webfonts.

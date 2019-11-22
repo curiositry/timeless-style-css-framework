@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;GAGG,AAGH,UAWC,CAVC,WAAW,CAAE,qBAAqB,CAClC,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,GAAG,CAChB,YAAY,CCLS,IAAI,CDMzB,GAAG,CAAE,kCAA0C,CAC/C,GAAG,CAAE,gSAI+D,CAGtE,IAAK,CACH,WAAW,CAAE,qBAAqB,CAClC,WAAW,CAAE,GAAG",
+"sources": ["regular.scss","_variables.scss"],
+"names": [],
+"file": "regular.css"
+}
