@@ -28,34 +28,35 @@
 }
 
 @mixin type-typescale($scale, $base, $value, $measure: '') {
-  @if $value == rem {
-    font-size: $scale * 1px;
-    font-size: (($scale/$base) * 0.8) + $value;
-
-    @include bp(md) {
-      font-size: $scale * 1px;
-      font-size: (($scale/$base) * 0.8) + $value;
-    }
-    @include bp(lg) {
-      font-size: $scale * 1px;
-      font-size: (($scale/$base) * 1) + $value;
-    }
-  } @else if $value == em {
-    font-size: ($scale/$base) + $value;
-  } @else {
-    font-size: $scale * 1px;
-  }
-
-  @if $measure != '' {
-    @if $value == rem {
-      margin-bottom: type-measure-margin($scale, $measure, $value: px);
-      margin-bottom: type-measure-margin($scale, $measure, $value);
-    } @else if $value == em {
-      margin-bottom: type-measure-margin($scale, $measure, $value: em);
-    } @else {
-      margin-bottom: type-measure-margin($scale, $measure, $value);
-    }
-  }
+  font-size: $scale * 1px;
+  // @if $value == rem {
+  //   font-size: $scale * 1px;
+  //   font-size: (($scale/$base) * 0.8) + $value;
+  //
+  //   @include bp(md) {
+  //     font-size: $scale * 1px;
+  //     font-size: (($scale/$base) * 0.8) + $value;
+  //   }
+  //   @include bp(lg) {
+  //     font-size: $scale * 1px;
+  //     font-size: (($scale/$base) * 1) + $value;
+  //   }
+  // } @else if $value == em {
+  //   font-size: ($scale/$base) + $value;
+  // } @else {
+  //   font-size: $scale * 1px;
+  // }
+  //
+  // @if $measure != '' {
+  //   @if $value == rem {
+  //     margin-bottom: type-measure-margin($scale, $measure, $value: px);
+  //     margin-bottom: type-measure-margin($scale, $measure, $value);
+  //   } @else if $value == em {
+  //     margin-bottom: type-measure-margin($scale, $measure, $value: em);
+  //   } @else {
+  //     margin-bottom: type-measure-margin($scale, $measure, $value);
+  //   }
+  // }
 }
 
 @mixin type-headings() {
