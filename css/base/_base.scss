@@ -84,25 +84,25 @@ code {
 }
 
 pre {
-  padding: 0.5rem 1rem;
+  padding: ($phi - 1) + rem 1rem;
   border: 1px solid mix($active-color, white, 20);
 }
 
 // Give it some space
 code {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem ($phi - 1) + rem;
 }
 
 // Bye bye hideous yellow…
 mark {
   background-color: $tertiary-color;
-  padding: 0 0.5rem 0.25rem 0.5rem;
+  padding: 0 ($phi - 1) + rem 0.25rem ($phi - 1) + rem;
   box-shadow: 0 0 0.25rem 0 $tertiary-color;
 }
 
 kbd {
   background-color: $tertiary-color;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem ($phi - 1) + rem;
   border-radius: 0.25rem;
   border: 1px solid $butler-color;
 }
@@ -160,7 +160,7 @@ thead {
 td,
 th {
   text-align: left;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem ($phi - 1) + rem;
   border: 1px solid $butler-color;
 }
 

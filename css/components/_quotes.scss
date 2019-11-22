@@ -36,7 +36,7 @@ blockquote.pull {
 .semantic-pull-quote--pulled {
   @extend %quote;
   @extend %pull;
-  padding: 0.5rem;
+  padding: ($phi - 1) + rem;
   margin-left: 2rem;
 }
 

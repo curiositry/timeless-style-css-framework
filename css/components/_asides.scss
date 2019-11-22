@@ -16,9 +16,9 @@ aside {
     width: 40%;
     float: right;
     margin-right: 0;
-    margin: 0.8rem;
+    margin: ($phi / 2) + rem;
     position: relative;
-    left: 0.5rem;
+    left: ($phi - 1) + rem;
   }
 }
 
@@ -51,7 +51,7 @@ aside.note:before {
   font-family: $interface-font-stack;
   font-weight: 900;
   color: $tertiary-color;
-  bottom: 0.5rem;
+  bottom: ($phi - 1) + rem;
   right: 1.5rem;
   content: '*';
   font-size: 3.054rem;

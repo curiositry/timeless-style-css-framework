@@ -54,8 +54,8 @@ $line-height: $phi !default;
 $font-base: 21 !default;
 $measure: $font-base * $line-height !default;
 $base-font-weight: 400 !default;
-$font-adjust-sm: 0.5;
-$font-adjust-md: 0.8;
+$font-adjust-sm: ($phi - 1);
+$font-adjust-md: ($phi / 2);
 $font-adjust-lg: 1;
 $x-height-offset: 0.25rem;
 

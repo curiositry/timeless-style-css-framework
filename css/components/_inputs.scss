@@ -6,7 +6,7 @@ input,
 button,
 textarea {
   width: 100%;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem ($phi - 1) + rem;
   font-weight: $base-font-weight;
   border: 1px solid $butler-color;
   box-shadow: none;

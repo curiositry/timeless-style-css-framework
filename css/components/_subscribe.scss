@@ -40,7 +40,7 @@
   color: white;
   float: left;
   padding-right: 1.5rem;
-  margin-top: -0.5rem;
+  margin-top: -($phi - 1) + rem;
   opacity: 0.3;
   @include bp(sm) {
     display: inline;

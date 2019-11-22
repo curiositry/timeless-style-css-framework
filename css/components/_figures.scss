@@ -17,7 +17,7 @@ img:has(+ figcaption) { // not supported yet...
 
 figcaption {
   font-family: $interface-font-stack;
-  font-size: 0.8rem;
+  font-size: ($phi / 2) + rem;
   padding: 1rem;
   margin-top: 0;
 }
@@ -31,7 +31,7 @@ figure.thumb {
   @include bp(sm) {
     float: right;
     max-width: 225px;
-    margin: 0.5rem 0 0.5rem 1rem;
+    margin: ($phi - 1) + rem 0 ($phi - 1) + rem 1rem;
   }
 }
 

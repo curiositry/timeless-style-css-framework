@@ -4,7 +4,7 @@ button:not([disabled]),
 input[type=submit]:not([disabled]) {
   background-color: $tertiary-color;
   background-image: linear-gradient(to bottom right, $tertiary-color, adjust-hue(darken($tertiary-color, 15), -25%));
-  padding: 0.5rem 0.8rem;
+  padding: ($phi - 1) + rem ($phi / 2) + rem;
   color: $primary-color;
   font-weight: 700;
   text-transform: uppercase;
@@ -18,7 +18,7 @@ input[type=submit]:not([disabled]) {
     background-image: linear-gradient(to bottom right, $secondary-color, adjust-hue($secondary-color, -25%));
     color: $bg-color !important;
     border: 1px solid $primary-color;
-    box-shadow: 0 0 0.5rem -0.15rem $primary-color inset;
+    box-shadow: 0 0 ($phi - 1) + rem -0.15rem $primary-color inset;
     transition: 0.3s;
   }
 }
@@ -33,7 +33,7 @@ input[type=submit]:not([disabled]) {
   &:hover {
     background-color: $active-color;
     background-image: linear-gradient(to bottom right, adjust-hue($active-color, 10%), $active-color);
-    box-shadow: 0 0 0.5rem -0.15rem $primary-color inset;
+    box-shadow: 0 0 ($phi - 1) + rem -0.15rem $primary-color inset;
     border: 1px solid darken($active-color, 10);
   }
 }

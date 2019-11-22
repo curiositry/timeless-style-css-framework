@@ -41,7 +41,7 @@
     grid-column: auto / auto;
   }
 
-  padding: 0.5rem;
+  padding: ($phi - 1) + rem;
   margin: 0;
 }
 
