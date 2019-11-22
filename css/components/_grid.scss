@@ -10,8 +10,8 @@
 
   justify-content: center;
 
-  // Give us 3 columns by default...
-  grid-template-columns: repeat(3, 1fr);
+  // Give us 2 columns by default...
+  grid-template-columns: 1.618fr  1fr;
 
   margin: 0 auto;
   max-width: 1500px;
