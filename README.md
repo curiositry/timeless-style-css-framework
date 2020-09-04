@@ -1,8 +1,8 @@
-# Sassisfy
+# Timeless Style CSS Framework
 
 **A solid + satisfying Sass starting point for stable and sane stylesheet architecture.**
 
-Sassisfy is what I start all my web project with, to avoid re-writing code for every site. It has the basics like a CSS reset, clean but minimal styling for elements like forms and buttons, and a rock-solid and tasteful typographic hierarchy and modular scale.
+Timeless is what I start all my web project with, to save time re-writing code for every site. It has the basics like a CSS reset, clean but minimal styling for elements like forms and buttons, and a rock-solid and tasteful typographic hierarchy and modular scale.
 
 Other neat features include:
 
@@ -12,5 +12,5 @@ Other neat features include:
 - Fontawesome icons (optional)
 - Helpful helpers for basic layout and styling
 - Great typography by default
-- Sassisfy is made of small, discreet components: only use what you need.
+- Timeless is made of small, discreet components: only use what you need.
 - Responsive image gallery, pullquotes, and more
