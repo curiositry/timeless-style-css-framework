@@ -18,6 +18,11 @@ $tertiary-color: #eee;
 // $primary-color: #152a38;
 // $secondary-color: #29435c;
 // $tertiary-color: #d1d4c9;
+$primary-color: #000;
+$secondary-color: maroon;
+$tertiary-color: rgb(245, 238, 222);;
+
+
 $c1: $primary-color;
 $c2: $secondary-color;
 $c3: $tertiary-color;
@@ -35,6 +40,11 @@ $text-font-stack: 'Source Serif Pro', 'Charter', 'Georgia', serif;
 $interface-font-stack: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", sans-serif;
 $header-font-stack: $text-font-stack;
 $mono-font-stack: 'Source Code Pro', 'Consolas', 'Ubuntu Mono', monospace;
+
+$text-font-stack: 'Libertinus Serif', 'Linux Libertine', 'Source Serif Pro', 'Charter', 'Georgia', serif;
+$interface-font-stack: 'Libertinus Sans', "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", sans-serif;
+$header-font-stack: 'Libertinus Serif Display', $text-font-stack;
+$mono-font-stack: 'Libertinus Mono', 'Consolas', 'Ubuntu Mono', monospace;
 
 // Short vars for font-stack
 $tfs: $text-font-stack;
