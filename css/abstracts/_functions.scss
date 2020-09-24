@@ -55,7 +55,7 @@
   $sum: 0;
 
   @for $index from $initial to $limit {
-    $sum: $sum + call($iteratee, $input, $index);
+    $sum: $sum + call(get-function($iteratee), $input, $index);
   }
 
   @return $sum;
@@ -66,7 +66,7 @@
 }
 
 @function exp($value) {
-  @return summation('exp-maclaurin', $value, 0, 100);
+  @return summation(exp-maclaurin, $value, 0, 100);
 }
 
 @function ln-maclaurin($x, $n) {
