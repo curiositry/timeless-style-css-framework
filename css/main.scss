@@ -7,13 +7,14 @@
 // By @curiositry
 // https://github.com/curiositry/timeless
 
-@import 'utils/functions';
-@import 'utils/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/helpers';
 
 @import 'vendor/sanitize';
 @import 'vendor/utility-opentype';
 
-@import 'base/variables';
 @import 'base/base';
 @import 'base/typography';
 @import 'base/print';
@@ -28,5 +29,3 @@
 @import 'components/asides';
 @import 'components/share';
 @import 'components/subscribe';
-
-@import 'utils/helpers';
