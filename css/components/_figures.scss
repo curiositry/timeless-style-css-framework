@@ -17,7 +17,7 @@ img:has(+ figcaption) { // not supported yet...
 
 figcaption {
   font-family: $interface-font-stack;
-  font-size: ($phi / 2) + rem;
+  font-size: ($phi * 0.5) + rem;
   padding: 1rem;
   margin-top: 0;
 }

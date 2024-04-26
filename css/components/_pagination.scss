@@ -9,7 +9,7 @@
   cursor: pointer;
   text-decoration: none;
   display: inline !important;
-  padding: 0.25rem ($phi - 1) + rem 0.25rem ($phi / 2) + rem;
+  padding: 0.25rem ($phi - 1) + rem 0.25rem ($phi * 0.5) + rem;
   margin: 0.25rem;
   background-color: $tertiary-color;
   color: $interactive-color;

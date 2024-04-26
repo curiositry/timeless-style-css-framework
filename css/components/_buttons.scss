@@ -4,7 +4,7 @@ button:not([disabled]),
 input[type=submit]:not([disabled]) {
   background-color: $tertiary-color;
   background-image: linear-gradient(to bottom right, $tertiary-color, adjust-hue(darken($tertiary-color, 15), -25%));
-  padding: ($phi - 1) + rem ($phi / 2) + rem;
+  padding: ($phi - 1) + rem ($phi * 0.5) + rem;
   color: $primary-color;
   font-weight: 700;
   text-transform: uppercase;

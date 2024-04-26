@@ -5,13 +5,15 @@
 // Find it here: http://github.com/typeplate/starter-kit
 
 // Divide 1 unit of $measure by $font-size; return relative value
+@use "sass:math";
+
 @function type-measure-margin($scale, $measure, $value) {
-  $pxValue: $scale/$measure;
+  $pxValue: math.div($scale, $measure);
   $remValue: $pxValue * $font-base;
   @if $value == rem {
     @return $pxValue + $value;
   } @else if $value == em {
-    @return ($remValue/$scale) + $value;
+    @return math.div($remValue, $scale) + $value;
   } @else {
     @return $remValue * 1px;
   }
@@ -30,7 +32,7 @@
     }
   } @else if $exponent < 0 {
     @for $i from 1 through -$exponent {
-      $value: $value / $number;
+      $value: math.div($value, $number);
     }
   }
 
@@ -62,7 +64,7 @@
 }
 
 @function exp-maclaurin($x, $n) {
-  @return (pow($x, $n) / factorial($n));
+  @return math.div(pow($x, $n), factorial($n));
 }
 
 @function exp($value) {
@@ -70,7 +72,7 @@
 }
 
 @function ln-maclaurin($x, $n) {
-  @return (pow(-1, $n + 1) / $n) * (pow($x - 1, $n));
+  @return math.div(pow(-1, $n + 1), $n) * (pow($x - 1, $n));
 }
 
 @function ln($value) {
@@ -81,5 +83,5 @@
     $ten-exp: $ten-exp + 1;
   }
 
-  @return summation(ln-maclaurin, $value / pow(10, $ten-exp), 1, 100) + $ten-exp * $ln-ten;
+  @return summation(ln-maclaurin, math.div($value, pow(10, $ten-exp)), 1, 100) + $ten-exp * $ln-ten;
 }

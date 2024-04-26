@@ -10,7 +10,7 @@ aside {
     width: 40%;
     float: right;
     margin-right: 0;
-    margin: ($phi / 2) + rem $phi + rem;
+    margin: ($phi * 0.5) + rem $phi + rem;
   }
 }
 

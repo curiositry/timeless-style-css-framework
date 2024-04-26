@@ -6,6 +6,8 @@
 // The web’s default colours are pretty OK, so we'll mostly use them.
 
 // For links and so on
+@use "sass:math";
+
 $interactive-color: darkblue;
 $active-color: blue;
 // $interactive-color: mix(#ff5335, black, 90);
@@ -65,7 +67,7 @@ $font-base: 21 !default;
 $measure: $font-base * $line-height !default;
 $base-font-weight: 400 !default;
 $font-adjust-sm: ($phi - 1);
-$font-adjust-md: ($phi / 2);
+$font-adjust-md: ($phi * 0.5);
 $font-adjust-lg: 1;
 $x-height-offset: 0.25rem;
 
@@ -113,7 +115,7 @@ $type-scale: (
   timeless-gamma: $font-base * $phi,
   timeless-delta: $font-base * pow($phi, 0.5),
   timeless-epsilon: $font-base,
-  timeless-zeta: $font-base / pow($phi, 0.5),
+  timeless-zeta: math.div($font-base, pow($phi, 0.5)),
 ) !default;
 
 
