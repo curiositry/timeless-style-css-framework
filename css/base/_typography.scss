@@ -11,14 +11,14 @@
   line-height: $line-height;
   font-weight: $base-font-weight;
   font-size: $font-base + px;
+  // Transition to linear responsive function?
+  // font-size: calc(1rem + 0.25vw);
 
   @include bp(sm) {
     // font-size: 18px;
   }
 
-  @include bp(md) {
-
-  }
+  @include bp(md) {}
 }
 
 // Get some nice typeographic scale going
@@ -43,9 +43,7 @@ h6 {
 
 // Nice margins to match header sizing
 h1,
-h2 {
-
-}
+h2 {}
 
 h3,
 h4 {
@@ -62,31 +60,39 @@ p {
   font-family: $text-font-stack;
 }
 
-// p {
-//   text-indent: 1.5em;
-// }
+p {
+  text-indent: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-// p:first-of-type,
-// hr + p {
-//   text-indent: 0;
-// }
+p:first-of-type,
+hr+p {
+  text-indent: 0;
+}
 
 %dropcap {
   color: $secondary-color;
   text-transform: uppercase;
   font-family: 'Linux Libertine Initials O', 'Linux Libertine Initals';
   float: left;
-  font-size: 4.25rem;
-  padding: 0.33rem 0.33rem 0 0;
+  // font-size: 4.25rem;
+  font-size: 4.236rem;
+  font-size: 3.14rem;
+  // font-size: 2.618rem;
+  // padding: 0.33rem 0.33rem 0 0;
+  padding: 0.236rem 0.236rem 0 0;
+
+
 }
 
 p:first-of-type:first-letter,
-hr + p:first-letter {
-  // @extend %dropcap;
+hr+p:first-letter {
+  @extend %dropcap;
 }
 
 p:first-of-type:first-line {
-  // text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 // Put meta kinds of things in sans-serif
