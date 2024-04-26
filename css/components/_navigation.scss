@@ -1,0 +1,124 @@
+// .menu-container.nav-hidden {
+//   grid-template-columns: 3rem auto;
+// }
+
+.menu-container {
+  @include bp(md) {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+}
+
+nav {
+  text-align: center;
+  @extend .arrow-box;
+  background-color: $tertiary-color;
+  margin-top: 0;
+  @include bp(md) {
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media all and (max-width: 800px) { // Phone-
+  nav::before,
+  nav::after {
+    background: none !important;
+  }
+}
+
+.site-header a {
+  border-bottom: 0;
+}
+
+.site-header a:hover {
+  border-bottom: 0;
+}
+
+nav li {
+  margin-left: 0;
+  @include bp(md){
+    margin-left: 1.25rem;
+    display: inline;
+  }
+}
+
+nav li:first-of-type {
+  @include bp(md){
+    margin-left:0;
+  }
+}
+
+nav ul {
+  margin: 0;
+  margin-left: 0;
+  text-indent: none;
+  padding-inline-start: 0;
+}
+
+.site-navigation {
+  padding: 0.5rem;
+
+}
+
+#menu-toggle {
+  color: $tertiary-color;
+}
+
+#menu-toggle-icon {
+  // text-shadow: 0px 0px 4rem $active-color;
+  text-shadow:-1px -1px 0 $secondary-color,
+   1px -1px 0 $secondary-color,
+   -1px 1px 0 $secondary-color,
+   1px 1px 0 $secondary-color;
+}
+
+.share-menu {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  margin-top: 0;
+}
+
+.share-menu a {
+  display: table;
+  margin-top: 0;
+  height: 100%;
+  width: 100%;
+  @include bp(md){
+    width: 4rem;
+  }
+  padding: 1rem;
+  border-left: 1px solid white;
+}
+
+.share-menu i {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.arrow-box {
+  position: relative;
+  background: $tertiary-color;
+}
+
+.arrow-box::before,
+.arrow-box::after {
+  position: absolute;
+  left: -2rem;
+  content: '';
+  height: 50%;
+  width: 2rem;
+}
+
+.arrow-box:before {
+  right: 0;
+  background: linear-gradient(to top left, $tertiary-color 50%, transparent 50%);
+}
+
+.arrow-box:after {
+  bottom: 0;
+  background: linear-gradient(to bottom left, $tertiary-color 50%, transparent 50%);
+}
